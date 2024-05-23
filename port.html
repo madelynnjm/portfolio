@@ -8,40 +8,68 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <nav id="navbar">
-      <h2 id="masthead">Madelynn Mast</h2>
-      <a href="#projects">CV</a>
-      <a href="#projects">About Me</a>
-      <a href="#projects">Work</a>
-    </nav>
+    <div class="pill-nav">
+      <a href="#home">M.J. Mast</a>
+      <a href="#news" class="split">News</a>
+      <a href="#contact" class="split">Contact</a>
+      <a href="#about" class="split">About</a>
+    </div> 
 
-    <section id="welcome-section">
-      <div id="welcome-container">
-        <h1><a id="hidden">Physicist.</a><a id="hidden">Student.</a> <a id="hidden">Jack of All Trades.</a></h1>
+    <section class="welcome-section">
+      <div class="text">
+        <h2>Physicist. Student. Programmer.</h2>
+        <p id="blue">My name is Madelynn and I’m a recent Queen’s University graduate in physics and computer science. I’m fanatically curious and excited to learn so my work experience covers a lot of disciplines. Check out my work or interests tab for a few examples. Currently I am working on an AI Dungeon Master for D&D, doing some AI training with DataAnnotation, and trying to beat Zelda: Breathe of the Wild. If any of those things interest you give me a shout! I’m currently located in Kingston, ON and can be reached regularly at my email or LinkedIn.</p>
       </div>
-      </section>
 
-    <section id="about">
-      <div #about-text>
-        <p>My name is Madelynn and I’m a rising senior at Queen’s University studying physics and computer science. I’m fanatically curious and excited to learn anything and everything. Check out my work tab for a few examples.</p>
-        <p>\\</p>
-        <p> Right now I’m finishing my thesis in cryogenic silicon photonics, working on my master’s applications, and trying to beat Zelda: Breathe of the Wild. 
-        <p>\\</p> 
-        <p>If any of those things interest you give me a shout! I’m currently located in Kingston, ON and can be reached regularly at my email or LinkedIn.</p>
+      <div class="headshot">
+        <img src="Assets/IMG_2454.JPG" alt="me">
       </div>
     </section>
 
-    <section id="projects">
-      <h2>Project Examples</h2>
-      <a class="project-tile" href="https://github.com/mastgames/Potion-Shop" target="_blank">
-        <img id="project-image" src="https://cdn.apexminecrafthosting.com/img/uploads/2020/11/27214716/potion-large.png" />
-        <p> Potion Landing Page </p>
-      </a>
+    <section id="gallery">
+      <h1>Portfolio</h1>
+      <p> Check out some of the things I've been working on.</p>
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('physics')"> Physics</button>
+        <button class="btn" onclick="filterSelection('AI')"> AI</button>
+        <button class="btn" onclick="filterSelection('data')"> Data</button>
+      </div>
+      
+      <!-- Portfolio Gallery Grid -->
+      <div class="row">
+        <div class="column physics">
+          <div class="content">
+            <img src="Assets\Screenshot 2024-05-23 191734.png" alt="Thesis" style="width:100%">
+            <h4>Thesis</h4>
+            <p>My undergraduate thesis paper</p>
+          </div>
+        </div>
+        
+      
+        <div class="column AI">
+          <div class="content">
+            <img src="Assets\Screenshot 2024-05-23 191908.png" alt="Car" style="width:100%">
+            <h4>D&D</h4>
+            <p>My AI DM</p>
+          </div>
+        </div>
+      
+        <div class="column data">
+          <div class="content">
+            <img src="Assets\Screenshot 2024-05-23 191816.png" alt="People" style="width:100%">
+            <h4>Poster</h4>
+            <p>My thesis poster</p>
+          </div>
+        </div>
+        
+      <!-- END GRID -->
+      </div> 
     </section>
 
     <div id="contact">
       <a id="profile-link" href="https://github.com/mastgames" target="_blank">Github</a>
     </div>
-	<script src="index.js"></script>
+	<script src="filter.js"></script>
   </body>
 </html>
