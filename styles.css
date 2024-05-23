@@ -2,36 +2,89 @@
     margin:0;
     padding:0;
   }
-  
+
+  @font-face {
+    font-family: Tuffy;
+    src: url(Fonts/Tuffy.otf);
+  }
+
+  #masthead{
+    font-family: Tuffy;
+    position: absolute;
+    left: 0;
+    margin: 20px;
+    color: #CDCDCD;
+  }
+
   #navbar{
     display:flex;
     justify-content:flex-end;
-    position:sticky;
+    align-items:center;
     top:0;
-    background-color:black;
-    margin-top:5px;
-    height:40px;
+    background-color:#57676C;
+    height:80px;
+    width: 100%;
   }
-  
+
   h2{
-    padding:7px;
+    font-size: 24px;
   }
   
-  a{
-    color:white;
-    padding:10px;
+a{
+    font-size: 16px;
+    font-family: Tuffy; 
+    color:#CDCDCD;
+    padding:50px;
     text-decoration:none;
+  }
+
+  h1{
+    line-height: 2.8em;
+  }
+
+  #hidden{
+    color: #57676C;
+    padding: 10px 10px 0 10px;
+    font-size: 64px;
+  }
+
+  #hidden:hover{
+    background-color: yellow;
   }
   
   #welcome-section{
     display:flex;
     justify-content:center;
     align-items:center;
-    background-color:beige;
+    background-color:#CDCDCD;
+    height:calc(100vh - 80px);
+    width:100%;
+    text-align: center;
+  }
+
+  #welcome-container{
+    max-width: 560px;
+  }
+
+  #about{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    background-color:#57676C;
     height:100vh;
     width:100%;
     margin:0;
-    padding:0;
+  }
+
+
+  p{
+    color:#CDCDCD;
+    font-family: Tuffy;
+    font-size:32px;
+    text-align: center;
+    padding: 0 50px;
+    max-width: 800px;
   }
   
   #projects{
@@ -52,16 +105,17 @@
     align-items:center;
   }
   
-  @media screen and (max-width: 450px) {
-    #welcome-section{
-      font-size:10px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background-color:beige;
-    height:100vh;
-    width:100%;
-    margin:0;
-    padding:0;
-  }
+  /* On screens that are 992px or less, set the background color to blue */
+  @media screen and (max-width: 650px) {
+    
+    #about{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        background-color:yellow;
+        height:100vh;
+        width:100%;
+        margin:0;
+      }
   }
